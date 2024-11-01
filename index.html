@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft - Pocket Edition</title>
     <style>
-       html, body {
+            @font-face {
+            font-family: 'Minecraft';
+            src: url('minecraft.ttf') format('truetype'); /* Adjust the path if necessary */
+        }
+
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden; /* Prevent scrolling */
+            font-family: 'Minecraft', sans-serif; /* Apply the font */
         }
         iframe {
             border: none; /* Remove border */
             width: 100%; /* Full width */
             height: 100%; /* Full height */
+            font-family: 'Minecraft', sans-serif; /* Apply the font to iframe content */
         }
     </style>
 </head>
