@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f0f0f0; /* Light background for visibility */
+        }
+
+        .table-layout {
+            width: 100%; /* Full width */
+            max-width: 600px; /* Optional max width */
+        }
+
+        .table-row {
+            display: flex;
+            width: 100%; /* Full width */
+        }
+
+        .image-button {
+            flex: 3; /* Weight of 3 */
+            margin: 0; /* No margin */
+            background-size: cover; /* Cover background */
+            border: none; /* No border */
+            height: 50px; /* Set a height */
+            cursor: pointer; /* Pointer cursor for buttons */
+        }
+
+        .image-button.middle {
+            flex: 7; /* Weight of 7 */
+            background-image: url('btn_nw_cancel.png'); /* Replace with actual cancel button image */
+        }
+
+        .image-button.right {
+            background-image: url('btn_nw_create.png'); /* Replace with actual create button image */
+            flex: 3; /* Weight of 3 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-layout">
+        <div class="table-row">
+            <button class="image-button left" style="background-image: url('btn_nw_cancel.png');"></button>
+            <button class="image-button middle"></button>
+            <button class="image-button right"></button>
+        </div>
+    </div>
+
+</body>
+</html>
