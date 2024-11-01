@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renaming World Layout</title>
+  <style>
+    /* Main container with vertical layout, centered horizontally */
+    .main-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      background-image: url('bgtiled.png'); /* Replace with your tiled background image */
+      background-repeat: repeat;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    /* Label text */
+    .label-text {
+      width: 360px;
+      height: 24px;
+      line-height: 24px;
+      font-family: monospace;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* ASCII text input */
+    .edit-text-ascii {
+      width: 360px;
+      height: 48px;
+      padding: 8px;
+      font-family: monospace;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    /* Spacing view */
+    .spacer {
+      width: 360px;
+      height: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-layout">
+    <div class="label-text" id="renameworld-title">Rename World</div> <!-- Replace with @string/renameworld_title -->
+    <input type="text" class="edit-text-ascii" id="editText_worldNameRename" maxlength="64" placeholder="Saved World Name" /> <!-- Replace with @string/renameworld_saved_world -->
+    <div class="spacer"></div>
+  </div>
+
+</body>
+</html>
