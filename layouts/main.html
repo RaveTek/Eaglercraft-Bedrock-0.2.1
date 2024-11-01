@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Layout</title>
+  <style>
+    /* Main container with vertical layout */
+    .main-layout {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Text input */
+    .edit-text {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* Button container with horizontal layout */
+    .button-layout {
+      display: flex;
+      width: 100%;
+    }
+
+    /* Buttons with equal width */
+    .button {
+      flex: 1;
+      height: auto;
+      padding: 10px;
+      margin: 0 5px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-layout">
+    <input type="text" class="edit-text" id="editText1" placeholder="">
+    <div style="height: 10px;"></div> <!-- Spacer -->
+    <div class="button-layout" id="linearLayout1">
+      <button class="button" id="button2">OK</button>
+      <button class="button" id="button1">Cancel</button>
+    </div>
+  </div>
+
+</body>
+</html>
