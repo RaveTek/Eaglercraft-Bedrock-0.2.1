@@ -8,5 +8,21 @@
     </style>
 </head>
 <body>
+    <script>
+  const htmlContents = {};
+  function fetchHtmlFiles(fileNames) {
+    fileNames.forEach(fileName => {
+      fetch(fileName)
+        .then(response => response.text())
+        .then(data => {
+          htmlContents[fileName] = data;
+          console.log(`Loaded ${fileName} content:`, htmlContents[fileName]);
+        })
+        .catch(error => console.error(`Error loading ${fileName}:`, error));
+    });
+  }
+  const filesToFetch = ['drawable/bgtiled.html', 'html/preferences.html', 'layouts/main.html', 'layouts/create_new_world.html', 'layouts/create_world_screen.html', 'layouts/mainmenu_options.html', 'layouts/rename_mp_world.html'];
+  fetchHtmlFiles(filesToFetch);
+</script>
 </body>
 </html>
