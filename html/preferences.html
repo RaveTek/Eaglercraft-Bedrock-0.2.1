@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .category { font-weight: bold; margin-top: 20px; }
+        .preference { margin: 10px 0; }
+        label { display: block; font-weight: bold; }
+        input[type="checkbox"] { margin-right: 8px; }
+    </style>
+</head>
+<body>
+
+<h1>Settings</h1>
+
+<!-- Multiplayer Category -->
+<div class="category">Multiplayer</div>
+<div class="preference">
+    <label for="mp_username">Username</label>
+    <input type="text" id="mp_username" name="mp_username" placeholder="Steve">
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="mp_server_visible_default" name="mp_server_visible_default" checked>
+        Server visible by default
+    </label>
+</div>
+
+<!-- Graphics Category -->
+<div class="category">Graphics</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="gfx_fancygraphics" name="gfx_fancygraphics">
+        Fancy graphics
+    </label>
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="gfx_lowquality" name="gfx_lowquality">
+        Lower graphics quality
+    </label>
+</div>
+
+<!-- Controls Category -->
+<div class="category">Controls</div>
+<div class="preference">
+    <label for="ctrl_sensitivity">Sensitivity</label>
+    <input type="range" id="ctrl_sensitivity" name="ctrl_sensitivity" min="0" max="100" value="50">
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="ctrl_invertmouse" name="ctrl_invertmouse">
+        Invert Y-axis
+    </label>
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="ctrl_islefthanded" name="ctrl_islefthanded">
+        Lefty
+    </label>
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="ctrl_usetouchscreen" name="ctrl_usetouchscreen" disabled checked>
+        Use touch screen
+    </label>
+</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="ctrl_usetouchjoypad" name="ctrl_usetouchjoypad">
+        Split touch controls
+    </label>
+</div>
+
+<!-- Feedback Category -->
+<div class="category">Feedback</div>
+<div class="preference">
+    <label>
+        <input type="checkbox" id="feedback_vibration" name="feedback_vibration" checked>
+        Vibration - Slight vibration when blocks are destroyed
+    </label>
+</div>
+
+</body>
+</html>
