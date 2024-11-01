@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create World Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-image: url('bgtiled.png'); /* Replace with your tiled background image */
+      background-repeat: repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-layout {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      display: flex;
+      height: 50px;
+      width: 100%;
+    }
+
+    .image-button {
+      flex: 3;
+      background: url('btn_nw_cancel.png') no-repeat center center; /* Replace with the actual button image */
+      background-size: cover;
+    }
+
+    .header-button {
+      flex: 7;
+      background: url('worldname_3.png') no-repeat center center; /* Replace with the actual header image */
+      background-size: cover;
+    }
+
+    .create-button {
+      flex: 3;
+      background: url('btn_nw_create.png') no-repeat center center; /* Replace with the actual create button image */
+      background-size: cover;
+    }
+
+    .world-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .edit-text-ascii {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .game-mode-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+    }
+
+    .description-text,
+    .seed-text {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .horizontal-layout {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .spacer {
+      flex: 0.25;
+      height: 50px; /* Adjust height as needed */
+    }
+
+    .seed-input {
+      flex: 0.5;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-layout">
+    <div class="header">
+      <div class="image-button" id="button_createworld_cancel"></div>
+      <div class="header-button" id="header_createworld_worldname"></div>
+      <div class="create-button" id="button_createworld_create"></div>
+    </div>
+
+    <div class="world-name">
+      <div class="spacer"></div>
+      <input type="text" class="edit-text-ascii" id="editText_worldName" placeholder="New World Name" maxlength="64" />
+      <div class="spacer"></div>
+    </div>
+
+    <div class="game-mode-button" id="button_gameMode">
+      <button style="width: 173px; height: 46px; background: url('btngamemode.png') no-repeat; background-size: cover;">Button</button>
+    </div>
+
+    <div class="description-text" id="labelGameModeDesc">
+      <p>@string/gamemode_survival_summary</p> <!-- Replace with @string/gamemode_survival_summary -->
+    </div>
+
+    <div class="seed-text" id="textView2">
+      <p>@string/createworld_seed</p> <!-- Replace with @string/createworld_seed -->
+    </div>
+
+    <div class="horizontal-layout">
+      <div class="spacer"></div>
+      <input type="text" class="seed-input" id="editText_worldSeed" placeholder="Seed" />
+      <div class="spacer"></div>
+    </div>
+
+    <div class="horizontal-layout">
+      <p id="textView3">@string/createworld_seed_info</p> <!-- Replace with @string/createworld_seed_info -->
+    </div>
+  </div>
+
+</body>
+</html>
