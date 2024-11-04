@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft</title>
-  <style>
-    /* Importing Mojangles font */
-    @font-face {
-      font-family: 'Mojangles';
-      src: url('mojangles.ttf') format('truetype');
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Pocket Edition</title>
+    <style>
+   /* Import the Mojangles font */
+        @font-face {
+            font-family: 'Mojangles';
+            src: url('mojangles.ttf') format('truetype');
+        }
+        /* Set background image and center content */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Background image file */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    /* Main container for the start screen */
-    .start-screen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-      background-color: #f0f0f0; /* Replace with background texture if needed */
-      font-family: 'Mojangles', sans-serif;
-    }
+        /* Top image style */
+       .top-image {
+            position: absolute;
+            top: 0;
+            width: 30%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+    .version-text {
+            font-family: 'Mojangles', sans-serif;
+            color: grey;
+            font-size: 22px;
+            position: absolute;
+            top: 115px; /* Adjusted to sit just below the top image */
+            text-align: center;
+        }
 
-    /* Button panel layout */
-    .button-panel {
-      display: block;
-      gap: 20px;
-      margin: 20px;
-    }
+        /* Container for buttons */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
 
-    /* Main button styles with textures and dimensions */
-    .main-button {
-      width: 200px;
-      height: 60px;
-      font-size: 1.2em;
-      color: #fff;
-      cursor: pointer;
-      border: none;
-      background-image: url('textures/ui/button.png');
-      background-size: cover;
-      transition: background-image 0.3s;
-      font-family: 'Mojangles', sans-serif;
-      display: block;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+        /* Button styles */
+        .button {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+        }
 
-    /* Hover effect for buttons */
+        .button1 {
+            background-image: url('button1.png'); /* Button 1 image file */
+        }
 
+        .button2 {
+            background-image: url('button2.png'); /* Button 2 image file */
+        }
 
-    /* Icon and button styles */
-  </style>
+        .button3 {
+            background-image: url('button3.png'); /* Button 3 image file */
+        }
+      .copyright {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-family: 'Mojangles', sans-serif;
+            font-size: 22px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <div class="start-screen">
-    <!-- Main Buttons Panel -->
-    <div class="button-panel">
-      <button class="main-button" id="joinGame"></button>
-      <button class="main-button" id="settingsButton"></button>
-      <button class="main-button" id="storeButton"></button>
+
+    <!-- Top Image -->
+    <img src="titlebg.png" alt="Top Image" class="top-image">
+
+  <!-- Version Text -->
+    <div class="version-text">v0.2.1 alpha</div>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <button class="button button1" onclick="location.href='joingame.html'"></button>
+        <button class="button button2" onclick="location.href='playgame.html'"></button>
+        <button class="button button3" onclick="location.href='gameoptions.html'"></button>
+  <div class="copyright">©Mojang AB</div>
     </div>
 
-    <!-- Icon Buttons -->
-    <div class="button-panel">
-    </div>
-  </div>
-
-  <script>
-    // JavaScript for Button Functionalities
-    document.getElementById("playButton").onclick = function() {
-    };
-
-    document.getElementById("settingsButton").onclick = function() {
-    };
-
-    document.getElementById("storeButton").onclick = function() {
-    };
-
-    // More button functionality can be added following this pattern
-  </script>
 </body>
 </html>
