@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Layout</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
-            background-color: #f0f0f0; /* Light background for visibility */
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Selection UI</title>
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .table-layout {
-            width: 100%; /* Full width */
-            max-width: 600px; /* Optional max width */
-        }
+    /* Import mojangles font */
+    @font-face {
+        font-family: 'mojangles';
+        src: url('mojangles.ttf') format('truetype');
+    }
 
-        .table-row {
-            display: flex;
-            width: 100%; /* Full width */
-        }
+    body {
+        background-image: url('bg.png');
+        font-family: 'mojangles', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+    }
 
-        .image-button {
-            flex: 3; /* Weight of 3 */
-            margin: 0; /* No margin */
-            background-size: cover; /* Cover background */
-            border: none; /* No border */
-            height: 50px; /* Set a height */
-            cursor: pointer; /* Pointer cursor for buttons */
-        }
+    .container {
+        width: 70%;
+        max-width: 900px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 
-        .image-button.middle {
-            flex: 7; /* Weight of 7 */
-            background-image: url('btn_nw_cancel.png'); /* Replace with actual cancel button image */
-        }
+    /* Top Buttons */
+    .top-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
 
-        .image-button.right {
-            background-image: url('btn_nw_create.png'); /* Replace with actual create button image */
-            flex: 3; /* Weight of 3 */
-        }
-    </style>
+    .top-buttons button {
+        background-image: url('button.png');
+        color: #ddd;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        width: 30%;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-family: 'mojangles', sans-serif;
+    }
+
+    .top-buttons button:hover {
+        background-image: url('button_hover.png');
+    }
+</style>
 </head>
 <body>
 
-    <div class="table-layout">
-        <div class="table-row">
-            <button class="image-button left" style="background-image: url('btn_nw_cancel.png');"></button>
-            <button class="image-button middle"></button>
-            <button class="image-button right"></button>
-        </div>
+<div class="container">
+    <div class="top-buttons">
+        <button onclick="location.href='mainmenu_options.html'">Back</button>
+        <button>Select World</button>
+        <button onclick="location.href='new_world.html'">Create New</button>
     </div>
+</div>
 
 </body>
 </html>
