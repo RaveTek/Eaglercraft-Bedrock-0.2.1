@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft - Pocket Edition</title>
     <style>
-            @font-face {
+        @font-face {
             font-family: 'Minecraft';
             src: url('minecraft.ttf') format('truetype'); /* Adjust the path if necessary */
         }
@@ -18,32 +18,45 @@
             overflow: hidden; /* Prevent scrolling */
             font-family: 'Minecraft', sans-serif; /* Apply the font */
         }
+        
         iframe {
             border: none; /* Remove border */
             width: 100%; /* Full width */
             height: 100%; /* Full height */
-            font-family: 'Minecraft', sans-serif; /* Apply the font to iframe content */
         }
     </style>
 </head>
 <body>
-<iframe src="layouts/mainmenu_options.html" title="Main Content"></iframe>
+    <!-- Main iframe to load the main menu -->
+    <iframe src="layouts/mainmenu_options.html" title="Main Content" allow="pointer-lock"></iframe>
 
     <script>
-  const htmlContents = {};
-  function fetchHtmlFiles(fileNames) {
-    fileNames.forEach(fileName => {
-      fetch(fileName)
-        .then(response => response.text())
-        .then(data => {
-          htmlContents[fileName] = data;
-          console.log(`Loaded ${fileName} content:`, htmlContents[fileName]);
-        })
-        .catch(error => console.error(`Error loading ${fileName}:`, error));
-    });
-  }
-  const filesToFetch = ['drawable/bgtiled.html', 'html/preferences.html', 'layouts/main.html', 'layouts/create_new_world.html', 'layouts/create_world_screen.html', 'layouts/mainmenu_options.html', 'layouts/rename_mp_world.html'];
-  fetchHtmlFiles(filesToFetch);
-</script>
+        const htmlContents = {};
+        
+        function fetchHtmlFiles(fileNames) {
+            fileNames.forEach(fileName => {
+                fetch(fileName)
+                    .then(response => response.text())
+                    .then(data => {
+                        htmlContents[fileName] = data;
+                        console.log(`Loaded ${fileName} content:`, htmlContents[fileName]);
+                    })
+                    .catch(error => console.error(`Error loading ${fileName}:`, error));
+            });
+        }
+
+        // List of files to load into memory
+        const filesToFetch = [
+            'drawable/bgtiled.html',
+            'html/preferences.html',
+            'layouts/main.html',
+            'layouts/create_new_world.html',
+            'layouts/create_world_screen.html',
+            'layouts/mainmenu_options.html',
+            'layouts/rename_mp_world.html'
+        ];
+
+        fetchHtmlFiles(filesToFetch);
+    </script>
 </body>
 </html>
