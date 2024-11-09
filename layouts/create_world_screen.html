@@ -15,17 +15,17 @@
     /* Import mojangles font */
     @font-face {
         font-family: 'mojangles';
-        src: url('mojangles.ttf') format('truetype');
+        src: url('path/to/mojangles.ttf') format('truetype');
     }
 
     body {
         background-image: url('background.jpg');
         font-family: 'mojangles', sans-serif;
+        color: white;
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: white;
+        align-items: flex-start;
+        min-height: 100vh;
     }
 
     .container {
@@ -35,6 +35,7 @@
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 10px;
     }
 
     /* Top Buttons */
@@ -45,20 +46,29 @@
     }
 
     .top-buttons button {
-        background-image: url('button.png');
         color: #ddd;
-        padding: 10px 20px;
+        padding: 10px;
         font-size: 16px;
         border: none;
         border-radius: 4px;
-        width: 30%;
         cursor: pointer;
         transition: background 0.3s;
         font-family: 'mojangles', sans-serif;
+        background-image: url('textures/ui/button.png');
+        background-size: cover;
     }
 
     .top-buttons button:hover {
-        background-image: url('button_hover.png');
+        background-image: url('textures/ui/button_hover.png');
+    }
+
+    /* Width adjustments */
+    .top-buttons .small-button {
+        width: 20%;
+    }
+
+    .top-buttons .large-button {
+        width: 50%;
     }
 </style>
 </head>
@@ -66,9 +76,9 @@
 
 <div class="container">
     <div class="top-buttons">
-        <button onclick="location.href='mainmenu_options.html'">Back</button>
-        <button>Select World</button>
-        <button onclick="location.href='new_world.html'">Create New</button>
+        <button class="small-button" onclick="location.href='mainmenu_options.html'">Back</button>
+        <button class="large-button">Select World</button>
+        <button class="small-button" onclick="location.href='new_world.html'">Create New</button>
     </div>
 </div>
 
